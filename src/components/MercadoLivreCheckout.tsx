@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import {
   ShieldCheck,
   Lock,
@@ -109,6 +109,27 @@ export const MercadoLivreCheckout: React.FC<MercadoLivreCheckoutProps> = ({
   const [copied, setCopied] = useState<boolean>(false);
   const [secondsLeft, setSecondsLeft] = useState<number>(900); // 15 minutes
   const [paymentStatus, setPaymentStatus] = useState<'pending' | 'approved'>('pending');
+
+  // Scroll containers refs (outer for mobile/full-screen, inner for desktop)
+  const outerModalRef = useRef<HTMLDivElement>(null);
+  const contentBodyRef = useRef<HTMLDivElement>(null);
+
+  // Automatically scroll to the very top whenever the user switches steps
+  useEffect(() => {
+    const scrollToTop = () => {
+      if (outerModalRef.current) {
+        outerModalRef.current.scrollTop = 0;
+      }
+      if (contentBodyRef.current) {
+        contentBodyRef.current.scrollTop = 0;
+      }
+      window.scrollTo(0, 0);
+    };
+
+    scrollToTop();
+    const rafId = requestAnimationFrame(scrollToTop);
+    return () => cancelAnimationFrame(rafId);
+  }, [step]);
 
   // Local mutable items for checkout so unit & quantity adjustments update totals in real-time
   const [checkoutItems, setCheckoutItems] = useState<CheckoutItem[]>(items);
@@ -377,7 +398,10 @@ export const MercadoLivreCheckout: React.FC<MercadoLivreCheckoutProps> = ({
   const seconds = (secondsLeft % 60).toString().padStart(2, '0');
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-neutral-900/60 backdrop-blur-xs flex items-start sm:items-center justify-center p-0 sm:p-4 animate-in fade-in duration-200">
+    <div
+      ref={outerModalRef}
+      className="fixed inset-0 z-50 overflow-y-auto bg-neutral-900/60 backdrop-blur-xs flex items-start sm:items-center justify-center p-0 sm:p-4 animate-in fade-in duration-200"
+    >
       <div className="bg-[#ededed] min-h-screen sm:min-h-0 sm:max-h-[92vh] sm:rounded-lg shadow-2xl w-full max-w-5xl flex flex-col overflow-x-hidden sm:overflow-hidden text-neutral-800 my-0 sm:my-auto">
         {/* Mercado Livre Official Header */}
         <header className="bg-[#ffe600] px-4 py-3 border-b border-[#eed600] flex items-center justify-between shrink-0 shadow-xs">
@@ -520,7 +544,7 @@ export const MercadoLivreCheckout: React.FC<MercadoLivreCheckoutProps> = ({
         </div>
 
         {/* Content Body: Two columns layout on desktop */}
-        <div className="flex-1 overflow-y-auto p-3 sm:p-6">
+        <div ref={contentBodyRef} className="flex-1 overflow-y-auto p-3 sm:p-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 max-w-5xl mx-auto">
             {/* Left Main Form Column */}
             <div className="lg:col-span-8 space-y-4">
