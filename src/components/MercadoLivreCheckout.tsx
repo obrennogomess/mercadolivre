@@ -377,8 +377,8 @@ export const MercadoLivreCheckout: React.FC<MercadoLivreCheckoutProps> = ({
   const seconds = (secondsLeft % 60).toString().padStart(2, '0');
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-neutral-900/60 backdrop-blur-xs flex items-center justify-center p-0 sm:p-4 animate-in fade-in duration-200">
-      <div className="bg-[#ededed] min-h-screen sm:min-h-0 sm:max-h-[92vh] sm:rounded-lg shadow-2xl w-full max-w-5xl flex flex-col overflow-hidden text-neutral-800">
+    <div className="fixed inset-0 z-50 overflow-y-auto bg-neutral-900/60 backdrop-blur-xs flex items-start sm:items-center justify-center p-0 sm:p-4 animate-in fade-in duration-200">
+      <div className="bg-[#ededed] min-h-screen sm:min-h-0 sm:max-h-[92vh] sm:rounded-lg shadow-2xl w-full max-w-5xl flex flex-col overflow-x-hidden sm:overflow-hidden text-neutral-800 my-0 sm:my-auto">
         {/* Mercado Livre Official Header */}
         <header className="bg-[#ffe600] px-4 py-3 border-b border-[#eed600] flex items-center justify-between shrink-0 shadow-xs">
           <div className="flex items-center gap-2 sm:gap-3">
@@ -423,7 +423,7 @@ export const MercadoLivreCheckout: React.FC<MercadoLivreCheckoutProps> = ({
         </header>
 
         {/* Checkout Progress Bar - All previous steps are clickable/selectable to go back */}
-        <div className="bg-white border-b border-neutral-200 px-4 py-2.5 flex items-center justify-center gap-2 sm:gap-6 text-xs font-medium">
+        <div className="bg-white border-b border-neutral-200 px-3 sm:px-4 py-2 sm:py-2.5 flex items-center justify-center gap-1.5 sm:gap-6 text-xs font-medium overflow-x-auto">
           <button
             type="button"
             onClick={() => setStep(1)}
@@ -913,7 +913,7 @@ export const MercadoLivreCheckout: React.FC<MercadoLivreCheckoutProps> = ({
 
               {/* STEP 3: TELA DE PAGAMENTO PIX IDÊNTICA AO MERCADO PAGO / SIGILOPAY */}
               {step === 3 && (
-                <div className="bg-white rounded-lg p-5 sm:p-7 shadow-xs border border-neutral-200/80 space-y-6 animate-in fade-in duration-200">
+                <div className="bg-white rounded-lg p-3.5 sm:p-7 shadow-xs border border-neutral-200/80 space-y-4 sm:space-y-6 animate-in fade-in duration-200">
                   {/* Status Banner */}
                   {paymentStatus === 'pending' ? (
                     <>
@@ -943,21 +943,21 @@ export const MercadoLivreCheckout: React.FC<MercadoLivreCheckoutProps> = ({
                         </span>
                       </div>
 
-                      <div className="bg-[#fff9e6] border border-[#ffe600] rounded-lg p-3 sm:p-4 flex items-center justify-between gap-3">
-                        <div className="flex items-center gap-2.5">
-                          <Clock size={20} className="text-[#b37400] shrink-0" />
-                          <div>
-                            <h3 className="text-xs sm:text-sm font-bold text-[#b37400]">
+                      <div className="bg-[#fff9e6] border border-[#ffe600] rounded-lg p-3 sm:p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 sm:gap-3">
+                        <div className="flex items-start sm:items-center gap-2.5">
+                          <Clock size={18} className="text-[#b37400] shrink-0 mt-0.5 sm:mt-0" />
+                          <div className="min-w-0 flex-1">
+                            <h3 className="text-xs sm:text-sm font-bold text-[#b37400] leading-snug">
                               Falta pouco! Pague via Pix para garantir seu pedido
                             </h3>
-                            <p className="text-[11px] sm:text-xs text-neutral-600">
+                            <p className="text-[11px] sm:text-xs text-neutral-600 mt-0.5">
                               Seu pedido no Mercado Livre está reservado. Conclua o pagamento antes do prazo.
                             </p>
                           </div>
                         </div>
 
-                        <div className="text-right shrink-0 bg-white px-3 py-1.5 rounded-md border border-neutral-200">
-                          <span className="text-[10px] text-neutral-500 uppercase font-bold block">
+                        <div className="flex items-center sm:flex-col justify-between sm:justify-center shrink-0 bg-white px-3 py-1.5 rounded-md border border-neutral-200 gap-2 sm:gap-0 self-stretch sm:self-auto">
+                          <span className="text-[10px] text-neutral-500 uppercase font-bold">
                             Expira em
                           </span>
                           <span className="text-base font-mono font-bold text-[#b37400]">
@@ -967,45 +967,53 @@ export const MercadoLivreCheckout: React.FC<MercadoLivreCheckoutProps> = ({
                       </div>
 
                       {/* Main Pix QR & Copy Section */}
-                      <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
-                        {/* QR Code Container */}
-                        <div className="md:col-span-5 flex flex-col items-center justify-center p-4 bg-neutral-50 rounded-lg border border-neutral-200 text-center">
-                          <div className="bg-white p-2.5 rounded-md shadow-xs border border-neutral-200 mb-2">
+                      <div className="grid grid-cols-1 md:grid-cols-12 gap-5 sm:gap-6 items-start">
+                        {/* QR Code Container - Fully centered & responsive with safe padding so QR code never cuts off */}
+                        <div className="md:col-span-5 flex flex-col items-center justify-center p-3.5 sm:p-5 bg-neutral-50 rounded-xl border border-neutral-200 text-center w-full min-w-0">
+                          <span className="text-xs font-bold text-neutral-800 mb-2">
+                            QR Code Pix
+                          </span>
+                          <div className="bg-white p-3 sm:p-4 rounded-xl shadow-xs border border-neutral-200 mb-2.5 max-w-full inline-flex items-center justify-center">
                             {qrCodeUrl ? (
                               <img
                                 src={qrCodeUrl}
                                 alt="QR Code Pix SigiloPay"
-                                className="w-48 h-48 sm:w-52 sm:h-52 object-contain"
+                                className="w-44 h-44 xs:w-48 xs:h-48 sm:w-56 sm:h-56 max-w-[62vw] max-h-[62vw] sm:max-w-none sm:max-h-none aspect-square object-contain mx-auto block select-none"
                               />
                             ) : (
-                              <div className="w-48 h-48 flex items-center justify-center text-neutral-400">
+                              <div className="w-44 h-44 xs:w-48 xs:h-48 sm:w-56 sm:h-56 flex items-center justify-center text-neutral-400">
                                 <QrCode size={64} />
                               </div>
                             )}
                           </div>
-                          <span className="text-[11px] text-neutral-500 font-medium">
+                          <span className="text-[11px] text-neutral-500 font-medium leading-tight px-1">
                             Aponte a câmera do seu banco para o QR Code
                           </span>
                         </div>
 
                         {/* Copy Paste Code & Steps */}
-                        <div className="md:col-span-7 space-y-4">
+                        <div className="md:col-span-7 space-y-3.5 sm:space-y-4 min-w-0 w-full">
                           <div>
-                            <label className="block text-xs font-bold text-neutral-800 mb-1.5">
-                              Pix Copia e Cola
-                            </label>
+                            <div className="flex items-center justify-between mb-1.5">
+                              <label className="block text-xs font-bold text-neutral-800">
+                                Pix Copia e Cola
+                              </label>
+                              <span className="text-[10px] sm:text-[11px] text-[#00a650] font-semibold">
+                                Recomendado no celular
+                              </span>
+                            </div>
                             <div className="relative">
                               <textarea
                                 readOnly
                                 value={pixCode}
                                 rows={3}
-                                className="w-full text-xs font-mono p-2.5 bg-neutral-50 border border-neutral-300 rounded text-neutral-700 resize-none outline-none select-all"
+                                className="w-full text-[11px] sm:text-xs font-mono p-2.5 bg-neutral-50 border border-neutral-300 rounded-md text-neutral-700 resize-none outline-none select-all break-all"
                               />
                             </div>
                             <button
                               type="button"
                               onClick={handleCopyPix}
-                              className={`w-full mt-2 py-3 rounded-md font-bold text-sm flex items-center justify-center gap-2 transition-all cursor-pointer shadow-xs ${
+                              className={`w-full mt-2 py-3 rounded-md font-bold text-sm flex items-center justify-center gap-2 transition-all cursor-pointer shadow-xs active:scale-[0.99] ${
                                 copied
                                   ? 'bg-[#00a650] text-white'
                                   : 'bg-[#3483fa] hover:bg-[#2968c8] text-white'
@@ -1026,11 +1034,11 @@ export const MercadoLivreCheckout: React.FC<MercadoLivreCheckoutProps> = ({
                           </div>
 
                           {/* Steps instructions */}
-                          <div className="bg-neutral-50 rounded-lg p-3.5 border border-neutral-200/70 space-y-2 text-xs text-neutral-700">
+                          <div className="bg-neutral-50 rounded-lg p-3 sm:p-3.5 border border-neutral-200/70 space-y-1.5 sm:space-y-2 text-xs text-neutral-700">
                             <span className="font-bold text-neutral-900 block text-[11px] uppercase tracking-wide">
                               Como pagar com Pix:
                             </span>
-                            <ol className="space-y-1.5 list-decimal list-inside text-[11px] leading-relaxed">
+                            <ol className="space-y-1 sm:space-y-1.5 list-decimal list-inside text-[11px] leading-relaxed">
                               <li>Abra o aplicativo do seu banco no celular</li>
                               <li>Escolha a opção <strong>Pix &gt; Copia e Cola</strong></li>
                               <li>Cole o código copiado acima e confirme o pagamento</li>
@@ -1040,8 +1048,8 @@ export const MercadoLivreCheckout: React.FC<MercadoLivreCheckoutProps> = ({
 
                           {/* Gateway details */}
                           <div className="flex flex-col gap-1.5 border-t border-neutral-100 pt-2 text-[11px] text-neutral-500">
-                            <div className="flex items-center justify-between">
-                              <span className="flex items-center gap-1.5">
+                            <div className="flex items-center justify-between flex-wrap gap-1">
+                              <span className="flex items-center gap-1.5 flex-wrap">
                                 Processado por: <strong>{gatewayLabel}</strong>
                                 {isLiveSigilo && (
                                   <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
@@ -1050,15 +1058,15 @@ export const MercadoLivreCheckout: React.FC<MercadoLivreCheckoutProps> = ({
                                   </span>
                                 )}
                               </span>
-                              <span>Beneficiário: <strong>Mercado Livre</strong></span>
+                              <span className="shrink-0">Beneficiário: <strong>Mercado Livre</strong></span>
                             </div>
 
                             {sigiloTxId && (
-                              <div className="flex items-center justify-between bg-neutral-100/80 px-2.5 py-1.5 rounded text-[11px] text-neutral-700 border border-neutral-200/60">
-                                <span className="text-neutral-500 font-medium">
+                              <div className="flex flex-col xs:flex-row xs:items-center justify-between gap-1 bg-neutral-100/80 px-2.5 py-1.5 rounded text-[11px] text-neutral-700 border border-neutral-200/60">
+                                <span className="text-neutral-500 font-medium shrink-0">
                                   ID SigiloPay (Gateway &gt; Transações):
                                 </span>
-                                <span className="font-mono font-bold text-neutral-900 select-all">
+                                <span className="font-mono font-bold text-neutral-900 select-all break-all text-[10px] sm:text-[11px]">
                                   {sigiloTxId}
                                 </span>
                               </div>

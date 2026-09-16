@@ -217,8 +217,8 @@ export default async function handler(req: any, res: any) {
       } else {
         qrCodeDataUrl = await QRCode.toDataURL(pixCode, {
           errorCorrectionLevel: 'M',
-          margin: 2,
-          width: 380,
+          margin: 3,
+          width: 420,
           color: { dark: '#000000', light: '#ffffff' },
         });
       }
