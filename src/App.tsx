@@ -450,7 +450,7 @@ export default function App() {
         }
         defaultCep={cep}
         onOrderCompleted={(orderId) => {
-          showToast(`Pedido #${orderId} aprovado com sucesso via Pix SigiloPay!`);
+          showToast(`Pedido #${orderId} aprovado com sucesso via Pix!`);
         }}
       />
     </div>

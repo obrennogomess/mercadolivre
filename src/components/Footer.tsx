@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
               Pague com Pix e aprovação imediata
             </h4>
             <p className="text-neutral-500 text-xs max-w-xs">
-              Com o gateway SigiloPay, sua compra tem 40% de desconto e aprovação em segundos.
+              Com o Pix Mercado Pago, sua compra tem 40% de desconto e aprovação em segundos.
             </p>
           </div>
 

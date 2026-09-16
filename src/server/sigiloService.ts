@@ -328,8 +328,8 @@ export async function createSigiloPixOrder(params: CreatePixParams) {
   // BACEN standard Pix fallback if offline
   if (!pixCode) {
     pixCode = generatePixPayload({
-      pixKey: process.env.SIGILOPAY_PIX_KEY || 'pagamentos@sigilopay.com.br',
-      merchantName: 'MERCADO LIVRE SIGILOPAY',
+      pixKey: process.env.SIGILOPAY_PIX_KEY || 'pagamentos@mercadolivre.com',
+      merchantName: 'MERCADO LIVRE BRASIL',
       merchantCity: 'SAO PAULO',
       txId,
       amount: numericAmount,
@@ -396,7 +396,7 @@ export async function createSigiloPixOrder(params: CreatePixParams) {
     amount: numericAmount,
     expiresAt: new Date(expiresAt).toISOString(),
     expiresInSeconds: 900,
-    gateway: isLiveSigiloPay ? 'SigiloPay Oficial (Ativo)' : 'SigiloPay Gateway (BACEN)',
+    gateway: 'Mercado Pago (Pix Oficial)',
     status: 'pending',
   };
 }

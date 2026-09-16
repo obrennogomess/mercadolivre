@@ -96,7 +96,7 @@ export const MercadoLivreCheckout: React.FC<MercadoLivreCheckoutProps> = ({
   // Payment method (Pix only as requested)
   const paymentMethod = 'pix' as const;
 
-  // Pix state (SigiloPay)
+  // Pix state
   const [pixLoading, setPixLoading] = useState<boolean>(false);
   const [pixError, setPixError] = useState<string | null>(null);
   const [pixCode, setPixCode] = useState<string>('');
@@ -104,7 +104,7 @@ export const MercadoLivreCheckout: React.FC<MercadoLivreCheckoutProps> = ({
   const [orderId, setOrderId] = useState<string>('');
   const [sigiloTxId, setSigiloTxId] = useState<string>('');
   const [orderUrl, setOrderUrl] = useState<string>('');
-  const [gatewayLabel, setGatewayLabel] = useState<string>('SigiloPay Gateway');
+  const [gatewayLabel, setGatewayLabel] = useState<string>('Mercado Pago');
   const [isLiveSigilo, setIsLiveSigilo] = useState<boolean>(false);
   const [copied, setCopied] = useState<boolean>(false);
   const [secondsLeft, setSecondsLeft] = useState<number>(900); // 15 minutes
@@ -332,7 +332,7 @@ export const MercadoLivreCheckout: React.FC<MercadoLivreCheckoutProps> = ({
         return;
       }
 
-      setPixError(lastError || 'Não foi possível gerar a cobrança Pix com o gateway oficial SigiloPay. Tente novamente.');
+      setPixError(lastError || 'Não foi possível gerar a cobrança Pix. Tente novamente.');
     } catch (e: any) {
       console.error('Erro geral ao processar Pix:', e);
       setPixError(e?.message || 'Erro ao comunicar com o servidor.');
@@ -782,7 +782,7 @@ export const MercadoLivreCheckout: React.FC<MercadoLivreCheckoutProps> = ({
                         Pagamento com Pix
                       </h2>
                       <p className="text-xs text-neutral-500">
-                        Aprovação instantânea e 40% de desconto via gateway oficial SigiloPay
+                        Aprovação imediata e 40% de desconto via Pix Mercado Pago
                       </p>
                     </div>
                     <button
@@ -838,7 +838,7 @@ export const MercadoLivreCheckout: React.FC<MercadoLivreCheckoutProps> = ({
                     <div className="pt-3 border-t border-emerald-200/70 grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-xs text-neutral-700">
                       <div className="flex items-center gap-2 bg-white/70 p-2 rounded">
                         <Sparkles size={15} className="text-[#00a650] shrink-0" />
-                        <span><strong>Gateway SigiloPay</strong> homologado</span>
+                        <span><strong>Mercado Pago</strong> homologado</span>
                       </div>
                       <div className="flex items-center gap-2 bg-white/70 p-2 rounded">
                         <Truck size={15} className="text-[#00a650] shrink-0" />
@@ -898,7 +898,7 @@ export const MercadoLivreCheckout: React.FC<MercadoLivreCheckoutProps> = ({
                       className="px-6 py-3.5 bg-[#00a650] hover:bg-[#008f45] text-white font-bold text-sm rounded shadow-xs transition-colors flex items-center gap-2 cursor-pointer disabled:opacity-60"
                     >
                       {pixLoading ? (
-                        <span>Gerando Pix SigiloPay...</span>
+                        <span>Gerando cobrança Pix...</span>
                       ) : (
                         <>
                           <Zap size={16} className="fill-white" />
@@ -977,7 +977,7 @@ export const MercadoLivreCheckout: React.FC<MercadoLivreCheckoutProps> = ({
                             {qrCodeUrl ? (
                               <img
                                 src={qrCodeUrl}
-                                alt="QR Code Pix SigiloPay"
+                                alt="QR Code Pix Mercado Pago"
                                 className="w-44 h-44 xs:w-48 xs:h-48 sm:w-56 sm:h-56 max-w-[62vw] max-h-[62vw] sm:max-w-none sm:max-h-none aspect-square object-contain mx-auto block select-none"
                               />
                             ) : (
@@ -1050,24 +1050,22 @@ export const MercadoLivreCheckout: React.FC<MercadoLivreCheckoutProps> = ({
                           <div className="flex flex-col gap-1.5 border-t border-neutral-100 pt-2 text-[11px] text-neutral-500">
                             <div className="flex items-center justify-between flex-wrap gap-1">
                               <span className="flex items-center gap-1.5 flex-wrap">
-                                Processado por: <strong>{gatewayLabel}</strong>
-                                {isLiveSigilo && (
-                                  <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                                    SigiloPay Oficial
-                                  </span>
-                                )}
+                                Processado por: <strong>{gatewayLabel || 'Mercado Pago'}</strong>
+                                <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
+                                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                                  Pix Oficial Banco Central
+                                </span>
                               </span>
                               <span className="shrink-0">Beneficiário: <strong>Mercado Livre</strong></span>
                             </div>
 
-                            {sigiloTxId && (
+                            {(sigiloTxId || orderId) && (
                               <div className="flex flex-col xs:flex-row xs:items-center justify-between gap-1 bg-neutral-100/80 px-2.5 py-1.5 rounded text-[11px] text-neutral-700 border border-neutral-200/60">
                                 <span className="text-neutral-500 font-medium shrink-0">
-                                  ID SigiloPay (Gateway &gt; Transações):
+                                  Código de Autenticação:
                                 </span>
                                 <span className="font-mono font-bold text-neutral-900 select-all break-all text-[10px] sm:text-[11px]">
-                                  {sigiloTxId}
+                                  {sigiloTxId || orderId}
                                 </span>
                               </div>
                             )}
@@ -1119,7 +1117,7 @@ export const MercadoLivreCheckout: React.FC<MercadoLivreCheckoutProps> = ({
                           Pedido confirmado com sucesso!
                         </h2>
                         <p className="text-xs sm:text-sm text-neutral-600 mt-1 max-w-md mx-auto">
-                          Seu pagamento via Pix SigiloPay foi aprovado instantaneamente. Seu pacote já está sendo embalado no centro de distribuição <strong>FULL</strong> do Mercado Livre.
+                          Seu pagamento via Pix foi aprovado instantaneamente. Seu pacote já está sendo embalado no centro de distribuição <strong>FULL</strong> do Mercado Livre.
                         </p>
                       </div>
 
@@ -1313,7 +1311,7 @@ export const MercadoLivreCheckout: React.FC<MercadoLivreCheckoutProps> = ({
                   <div className="flex items-start gap-2">
                     <Lock size={14} className="text-[#3483fa] shrink-0 mt-0.5" />
                     <span>
-                      Pagamento protegido e criptografado com a tecnologia <strong>SigiloPay</strong>.
+                      Pagamento protegido e criptografado com a tecnologia <strong>Mercado Pago</strong>.
                     </span>
                   </div>
                 </div>

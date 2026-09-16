@@ -71,7 +71,7 @@ export const PaymentModal: React.FC<PaymentModalProps> = ({
             </div>
             <div className="flex items-start gap-2">
               <Sparkles size={16} className="text-[#00a650] shrink-0 mt-0.5" />
-              <span><strong>Gateway SigiloPay Oficial:</strong> Transações criptografadas de ponta a ponta.</span>
+              <span><strong>Pagamento 100% Protegido:</strong> Transações criptografadas de ponta a ponta.</span>
             </div>
           </div>
 

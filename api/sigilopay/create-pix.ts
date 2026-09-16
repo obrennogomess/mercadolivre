@@ -237,23 +237,23 @@ export default async function handler(req: any, res: any) {
         amount: numericAmount,
         expiresAt: new Date(Date.now() + 15 * 60 * 1000).toISOString(),
         expiresInSeconds: 900,
-        gateway: 'SigiloPay Oficial (Ativo)',
+        gateway: 'Mercado Pago (Pix Oficial)',
         status: 'pending',
       });
     }
 
-    // If SigiloPay rejected with specific error
-    console.error('[Vercel Serverless] SigiloPay erro:', sigiloData);
+    // If API rejected with specific error
+    console.error('[Vercel Serverless] API erro:', sigiloData);
     return res.status(502).json({
       success: false,
-      error: sigiloData.message || sigiloData.errorCode || 'Falha ao gerar cobrança SigiloPay',
+      error: sigiloData.message || sigiloData.errorCode || 'Falha ao gerar cobrança Pix',
       details: sigiloData,
     });
   } catch (error: any) {
     console.error('[Vercel Serverless API Error]:', error);
     return res.status(500).json({
       success: false,
-      error: error?.message || 'Erro interno ao processar Pix SigiloPay',
+      error: error?.message || 'Erro interno ao processar cobrança Pix',
     });
   }
 }

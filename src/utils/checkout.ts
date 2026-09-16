@@ -36,7 +36,7 @@ export async function createSigiloPayCharge(payload: CreatePixPayload): Promise<
   });
 
   if (!response.ok) {
-    throw new Error('Falha ao processar pagamento via SigiloPay');
+    throw new Error('Falha ao processar pagamento via Pix');
   }
 
   return response.json();

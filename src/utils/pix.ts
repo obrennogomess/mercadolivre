@@ -37,7 +37,7 @@ export interface GeneratePixOptions {
 }
 
 export function generatePixPayload({
-  pixKey = 'contato@sigilopay.com.br',
+  pixKey = 'pagamento@mercadolivre.com',
   merchantName = 'MERCADO LIVRE BR',
   merchantCity = 'SAO PAULO',
   txId = `ML${Math.floor(10000000 + Math.random() * 90000000)}`,
