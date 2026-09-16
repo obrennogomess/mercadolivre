@@ -1,0 +1,10 @@
+{
+  "name": "Remix Spray Borracha Líquida Dryko Impermeabilizante Branco 400ml Kit 3 Unidades | Mercado Livre",
+  "description": "Spray Borracha Líquida Dryko Impermeabilizante Branco 400ml Kit 3 Unidades no Mercado Livre. Frete grátis no mesmo dia. Compre já com garantia e entrega rápida!",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

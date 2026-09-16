@@ -1,0 +1,2025 @@
+{
+  "flags": {
+    "isBot": false,
+    "loadable": true,
+    "islands": false,
+    "pipeableStream": false,
+    "stream": false,
+    "staticMarkup": false
+  },
+  "assets": {
+    "cdn": "https://http2.mlstatic.com",
+    "prefix": "https://http2.mlstatic.com/frontend-assets/affiliates-social-profile-view/"
+  },
+  "support": {
+    "customElements": {
+      "define": true,
+      "builtIn": true
+    },
+    "imgLoading": true,
+    "prefetch": true,
+    "sameSite": true,
+    "outdated": false,
+    "share": false
+  },
+  "title": "JEOMARSOUZALIMA | Perfil social",
+  "framework": "nordic",
+  "appProps": {
+    "pageProps": {
+      "deviceType": "desktop",
+      "osName": "windows",
+      "headerProps": {
+        "owner_id": "220494934",
+        "type": "AFFILIATE",
+        "device_type": "desktop",
+        "image": {
+          "url": "https://http2.mlstatic.com/D_NQ_NP_809783-MLA111765863190_062026-F.jpg",
+          "image_type": "CIRCLE",
+          "target": "https://www.mercadolivre.com.br/social/jeomarsouzalima#client=EMPTY_STATE&component_id=header_logo&component=header_logo&label=JEOMARSOUZALIMA&tracking_id=55d0751b-fae0-4e3b-b1f0-5052dbc8236d",
+          "image_id": null
+        },
+        "labels": [
+          {
+            "id": "full_name",
+            "label": {
+              "text": "JEOMARSOUZALIMA"
+            }
+          },
+          {
+            "id": "description",
+            "label": {
+              "text": ""
+            }
+          }
+        ],
+        "options_menu": {
+          "icon": "",
+          "nodes": [
+            {
+              "text": "Denunciar",
+              "url": "https://www.mercadolivre.com.br/noindex/denounce?bu=mercado_libre&product=affiliates&affiliate_user_id=220494934"
+            }
+          ]
+        },
+        "followers": {
+          "label_id": "sub_description",
+          "text": "+1.100 seguidores",
+          "cta_status": "do_follow",
+          "ctas": [
+            {
+              "id": "do_follow",
+              "label": {
+                "text": "Seguir"
+              },
+              "success_label": {
+                "text": "+1.100 seguidores"
+              },
+              "path": ""
+            },
+            {
+              "id": "stop_follow",
+              "label": {
+                "text": "Seguindo"
+              },
+              "success_label": {
+                "text": "+1.100 seguidores"
+              },
+              "path": ""
+            }
+          ],
+          "follows_entity": {
+            "entity_type": "user",
+            "entity_id": "220494934"
+          }
+        },
+        "contextual_menu": null,
+        "menu_type": "MENU",
+        "header_type": "default",
+        "share": {
+          "text": "Compartilhar",
+          "link": "https://www.mercadolivre.com.br/social/jeomarsouzalima",
+          "description": "Visite a página e encontre todos os produtos de JEOMARSOUZALIMA em um só lugar.",
+          "snackbar_message": "Pronto! Você copiou o link da página.",
+          "share_options": [
+            {
+              "social_media": "whatsapp",
+              "href": "https://wa.me://send?text=https://www.mercadolivre.com.br/social/jeomarsouzalima"
+            },
+            {
+              "social_media": "facebook",
+              "href": "https://www.facebook.com/sharer.php?u=https://www.mercadolivre.com.br/social/jeomarsouzalima"
+            },
+            {
+              "social_media": "x",
+              "href": "https://twitter.com/share?text=https://www.mercadolivre.com.br/social/jeomarsouzalima"
+            },
+            {
+              "social_media": "mail",
+              "href": "mailto:?subject=Visite a página de JEOMARSOUZALIMA&body=Visite a página de JEOMARSOUZALIMA e encontre todos os produtos em um só lugar: https%3A%2F%2Fwww.mercadolivre.com.br%2Fsocial%2Fjeomarsouzalima"
+            }
+          ]
+        },
+        "baseURL": "https://www.mercadolivre.com.br/social/api/lists/follow",
+        "tracks": {
+          "melidata_track": {
+            "path": "{path}",
+            "type": "event",
+            "event_data": {
+              "shop_id": "7b47bfcf87cc477fb703fd53c96a847d220494934",
+              "shop_name": "JEOMARSOUZALIMA",
+              "shop_type": "affiliate",
+              "client": "no_valid_client",
+              "component_id": "profile_header",
+              "owner_id": "220494934"
+            }
+          },
+          "paths": {
+            "share": "/eshops/share",
+            "follow": "/eshops/follow"
+          }
+        },
+        "trackingData": {
+          "shop_id": "7b47bfcf87cc477fb703fd53c96a847d220494934",
+          "shop_name": "JEOMARSOUZALIMA",
+          "shop_type": "affiliate",
+          "owner_id": "220494934",
+          "buyer_id": "",
+          "official_store_id": "-1"
+        }
+      },
+      "footerProps": {
+        "information": {
+          "icon": "info",
+          "text": "Gere receita com suas recomendações",
+          "tooltip": {
+            "content": "Estes produtos não são recomendações do Mercado Livre."
+          }
+        },
+        "report_link": {
+          "text": "Denunciar",
+          "url": "https://www.mercadolivre.com.br/noindex/denounce?bu=mercado_libre&product=affiliates&affiliate_user_id=220494934"
+        }
+      },
+      "listId": "63d925e7-a57f-4d62-9b4e-a2e38150c175",
+      "metrics": {
+        "category_id": "MLB33383",
+        "matt_tool": "78740255",
+        "page_type": "lists",
+        "tracking_id": "5a7b1666-d1f4-4e73-b24f-b3be611b52be",
+        "page_path": "list",
+        "owner_id": "220494934",
+        "total_results": 300
+      },
+      "isOwner": false,
+      "polycardContext": {
+        "contract_version": "1.0.0",
+        "picture_template": "https://http2.mlstatic.com/D_{square}_NP{2x}_{id}-{size}{sanitized_title}.webp",
+        "picture_size_default": "AB",
+        "url_prefix": "https://",
+        "type": "grid-card",
+        "card_size": "xlarge",
+        "checkbox": false,
+        "thousand_separator": ".",
+        "decimal_separator": ",",
+        "styles_default": [],
+        "picture_square_default": "Q",
+        "url_fragments_default": "#polycard_client=social-profile-middleend"
+      },
+      "polycards": [
+        {
+          "unique_id": "c573c181a0636bcb61",
+          "metadata": {
+            "id": "MLB2663961773",
+            "user_product_id": "MLBU602296100",
+            "url": "www.mercadolivre.com.br/asfalto-pronto-tapa-buraco-25kg-ensacado--frete-gratis/up/MLBU602296100",
+            "url_fragments": "#polycard_client=social-profile-middleend&wid=MLB2663961773&source=lists&type=item&tracking_id=%7Btracking_id%7D&sid=storefronts",
+            "url_params": "?pdp_filters=item_id%3AMLB2663961773&matt_tracing_id=b192ea61-0d89-4aa0-97c3-b3837b846b27&matt_event_ts=1788374403802&matt_d2id=",
+            "vertical": "",
+            "bookmark_id": "MK-1-220494934-I-MLB2663961773-63d925e7-a57f-4d62-9b4e-a2e38150c175"
+          },
+          "pictures": {
+            "scale": "FILL",
+            "pictures": [
+              {
+                "id": "740870-MLB111181677510_052026"
+              }
+            ],
+            "square": "Q",
+            "alt_text": "Imagen"
+          },
+          "components": [
+            {
+              "type": "title",
+              "id": "title",
+              "title": {
+                "text": "Asfalto Pronto Tapa Buraco 25kg Ensacado - Frete Grátis",
+                "long_title": false
+              }
+            },
+            {
+              "type": "seller",
+              "id": "seller",
+              "seller": {
+                "text": "Por IMPERCID Impermeabilizantes {icon_cockade}",
+                "values": [
+                  {
+                    "key": "icon_cockade",
+                    "type": "icon",
+                    "icon": {
+                      "key": "icon_cockade",
+                      "alt_text": "Loja oficial",
+                      "icon_id": "icon_cockade"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "price",
+              "id": "price",
+              "price": {
+                "current_price": {
+                  "value": 176.22,
+                  "currency": "BRL",
+                  "decimal_style": "superscript"
+                },
+                "installments": {
+                  "text": "12x {price}",
+                  "no_interest": false,
+                  "values": [
+                    {
+                      "key": "price",
+                      "type": "price",
+                      "price": {
+                        "value": 17.41,
+                        "currency": "BRL"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "promotions",
+              "id": "promotions",
+              "promotions": [
+                {
+                  "type": "rebate",
+                  "text": "20% OFF Cartão Mercado Pago Visa"
+                }
+              ]
+            },
+            {
+              "type": "shipping",
+              "id": "shipping",
+              "shipping": {
+                "text": "Frete grátis",
+                "promise_type": "none"
+              }
+            },
+            {
+              "type": "reviews",
+              "id": "reviews",
+              "reviews": {
+                "rating_average": 4.8,
+                "total": 33,
+                "alt_text": "Avaliação 4,8 de 5. (33 avaliações)"
+              }
+            },
+            {
+              "type": "action_links",
+              "id": "action_links",
+              "action_links": [
+                {
+                  "id": "delete_action",
+                  "text": "Excluir",
+                  "styles": {
+                    "font_size": "m",
+                    "font_weight": "bold"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "unique_id": "f6dfec1b1a0636bcb61",
+          "metadata": {
+            "id": "MLB6864783370",
+            "user_product_id": "MLBU4022941101",
+            "url": "www.mercadolivre.com.br/asfaltei-cbuq-modificado-a-frio-25kg/up/MLBU4022941101",
+            "url_fragments": "#polycard_client=social-profile-middleend&wid=MLB6864783370&source=lists&type=item&tracking_id=%7Btracking_id%7D&sid=storefronts",
+            "url_params": "?pdp_filters=item_id%3AMLB6864783370&matt_tracing_id=b192ea61-0d89-4aa0-97c3-b3837b846b27&matt_event_ts=1788374403802&matt_d2id=",
+            "vertical": "",
+            "bookmark_id": "MK-1-220494934-I-MLB6864783370-63d925e7-a57f-4d62-9b4e-a2e38150c175"
+          },
+          "pictures": {
+            "scale": "FILL",
+            "pictures": [
+              {
+                "id": "714936-MLB112454974909_052026"
+              }
+            ],
+            "square": "Q",
+            "alt_text": "Imagen"
+          },
+          "components": [
+            {
+              "type": "title",
+              "id": "title",
+              "title": {
+                "text": "Asfaltei Cbuq Modificado A Frio 25kg Preto",
+                "long_title": false
+              }
+            },
+            {
+              "type": "price",
+              "id": "price",
+              "price": {
+                "previous_price": {
+                  "value": 169.9,
+                  "currency": "BRL",
+                  "decimal_style": "normal"
+                },
+                "current_price": {
+                  "value": 161.41,
+                  "currency": "BRL",
+                  "decimal_style": "superscript"
+                },
+                "discount_label": {
+                  "text": "no Pix"
+                },
+                "installments": {
+                  "text": "{o} {price_total} {en} 5x {price} sem juros",
+                  "no_interest": true,
+                  "values": [
+                    {
+                      "key": "o",
+                      "type": "label",
+                      "label": {
+                        "text": "ou"
+                      },
+                      "styles": {
+                        "color": "primary"
+                      }
+                    },
+                    {
+                      "key": "price_total",
+                      "type": "price",
+                      "price": {
+                        "value": 169.9,
+                        "currency": "BRL"
+                      },
+                      "styles": {
+                        "color": "primary"
+                      }
+                    },
+                    {
+                      "key": "en",
+                      "type": "label",
+                      "label": {
+                        "text": "em"
+                      },
+                      "styles": {
+                        "color": "primary"
+                      }
+                    },
+                    {
+                      "key": "price",
+                      "type": "price",
+                      "price": {
+                        "value": 33.98,
+                        "currency": "BRL"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "promotions",
+              "id": "promotions",
+              "promotions": [
+                {
+                  "type": "rebate",
+                  "text": "20% OFF Cartão Mercado Pago Visa"
+                }
+              ]
+            },
+            {
+              "type": "shipping",
+              "id": "shipping",
+              "shipping": {
+                "text": "Frete grátis",
+                "promise_type": "none"
+              }
+            },
+            {
+              "type": "reviews",
+              "id": "reviews",
+              "reviews": {
+                "rating_average": 5,
+                "total": 1,
+                "alt_text": "Avaliação 5 de 5. (1 avaliações)"
+              }
+            },
+            {
+              "type": "action_links",
+              "id": "action_links",
+              "action_links": [
+                {
+                  "id": "delete_action",
+                  "text": "Excluir",
+                  "styles": {
+                    "font_size": "m",
+                    "font_weight": "bold"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "unique_id": "f66131ef1a0636bcb61",
+          "metadata": {
+            "id": "MLB2198408905",
+            "user_product_id": "MLBU1966069565",
+            "url": "www.mercadolivre.com.br/asfalto-frio-instant-pav-25kg-tapa-buraco-alta-resistencia/up/MLBU1966069565",
+            "url_fragments": "#polycard_client=social-profile-middleend&wid=MLB2198408905&source=lists&type=item&tracking_id=%7Btracking_id%7D&sid=storefronts",
+            "url_params": "?pdp_filters=item_id%3AMLB2198408905&matt_tracing_id=b192ea61-0d89-4aa0-97c3-b3837b846b27&matt_event_ts=1788374403802&matt_d2id=",
+            "vertical": "",
+            "bookmark_id": "MK-1-220494934-I-MLB2198408905-63d925e7-a57f-4d62-9b4e-a2e38150c175"
+          },
+          "pictures": {
+            "scale": "FILL",
+            "pictures": [
+              {
+                "id": "983173-MLB116705526515_082026"
+              }
+            ],
+            "square": "Q",
+            "alt_text": "Imagen"
+          },
+          "components": [
+            {
+              "type": "brand",
+              "id": "brand",
+              "brand": {
+                "text": "SEM  MARCA"
+              }
+            },
+            {
+              "type": "title",
+              "id": "title",
+              "title": {
+                "text": "Asfalto Frio Instant Pav 25kg Tapa Buraco Alta Resistência",
+                "long_title": false
+              }
+            },
+            {
+              "type": "seller",
+              "id": "seller",
+              "seller": {
+                "text": "Por Fast Obra {icon_cockade}",
+                "values": [
+                  {
+                    "key": "icon_cockade",
+                    "type": "icon",
+                    "icon": {
+                      "key": "icon_cockade",
+                      "alt_text": "Loja oficial",
+                      "icon_id": "icon_cockade"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "price",
+              "id": "price",
+              "price": {
+                "current_price": {
+                  "value": 64.9,
+                  "currency": "BRL",
+                  "decimal_style": "superscript"
+                }
+              }
+            },
+            {
+              "type": "promotions",
+              "id": "promotions",
+              "promotions": [
+                {
+                  "type": "rebate",
+                  "text": "20% OFF Cartão Mercado Pago Visa"
+                }
+              ]
+            },
+            {
+              "type": "reviews",
+              "id": "reviews",
+              "reviews": {
+                "rating_average": 4.6,
+                "total": 14,
+                "alt_text": "Avaliação 4,6 de 5. (14 avaliações)"
+              }
+            },
+            {
+              "type": "action_links",
+              "id": "action_links",
+              "action_links": [
+                {
+                  "id": "delete_action",
+                  "text": "Excluir",
+                  "styles": {
+                    "font_size": "m",
+                    "font_weight": "bold"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "unique_id": "36cb8dd81a0636bcb60",
+          "metadata": {
+            "id": "MLB4183932759",
+            "product_id": "MLB37004669",
+            "user_product_id": "MLBU3396394922",
+            "url": "www.mercadolivre.com.br/super-asfalto-queveks-36-litros/p/MLB37004669",
+            "url_fragments": "#polycard_client=social-profile-middleend&source=lists&type=product&tracking_id=%7Btracking_id%7D&wid=MLB4183932759&sid=storefronts",
+            "url_params": "?matt_event_ts=1788374403802&matt_d2id=&matt_tracing_id=b192ea61-0d89-4aa0-97c3-b3837b846b27",
+            "vertical": "",
+            "bookmark_id": "MK-1-220494934-P-MLB37004669-63d925e7-a57f-4d62-9b4e-a2e38150c175"
+          },
+          "pictures": {
+            "scale": "FILL",
+            "pictures": [
+              {
+                "id": "893822-MLA99847639151_112025"
+              }
+            ],
+            "square": "Q",
+            "alt_text": "Imagen"
+          },
+          "components": [
+            {
+              "type": "brand",
+              "id": "brand",
+              "brand": {
+                "text": "QUEVEKS"
+              }
+            },
+            {
+              "type": "title",
+              "id": "title",
+              "title": {
+                "text": "Super Asfalto Queveks 3,6 Litros",
+                "long_title": false
+              }
+            },
+            {
+              "type": "price",
+              "id": "price",
+              "price": {
+                "current_price": {
+                  "value": 132.9,
+                  "currency": "BRL",
+                  "decimal_style": "superscript"
+                }
+              }
+            },
+            {
+              "type": "promotions",
+              "id": "promotions",
+              "promotions": [
+                {
+                  "type": "rebate",
+                  "text": "20% OFF Cartão Mercado Pago Visa"
+                }
+              ]
+            },
+            {
+              "type": "shipping",
+              "id": "shipping",
+              "shipping": {
+                "text": "Frete grátis",
+                "promise_type": "none"
+              }
+            },
+            {
+              "type": "action_links",
+              "id": "action_links",
+              "action_links": [
+                {
+                  "id": "delete_action",
+                  "text": "Excluir",
+                  "styles": {
+                    "font_size": "m",
+                    "font_weight": "bold"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "unique_id": "3e6330f51a0636bcb60",
+          "metadata": {
+            "id": "MLB5371256702",
+            "product_id": "MLB42925862",
+            "user_product_id": "MLBU3154988892",
+            "url": "www.mercadolivre.com.br/spray-borracha-liquida-dryko-impermeabilizante-branco-400ml-kit-3-unidades/p/MLB42925862",
+            "url_fragments": "#polycard_client=social-profile-middleend&source=lists&type=product&tracking_id=%7Btracking_id%7D&wid=MLB5371256702&sid=storefronts",
+            "url_params": "?matt_event_ts=1788374403802&matt_d2id=&matt_tracing_id=b192ea61-0d89-4aa0-97c3-b3837b846b27",
+            "vertical": "",
+            "bookmark_id": "MK-1-220494934-P-MLB42925862-63d925e7-a57f-4d62-9b4e-a2e38150c175"
+          },
+          "pictures": {
+            "scale": "FILL",
+            "pictures": [
+              {
+                "id": "684425-MLA99954571681_112025"
+              }
+            ],
+            "square": "Q",
+            "alt_text": "Imagen"
+          },
+          "components": [
+            {
+              "type": "highlight",
+              "id": "highlight",
+              "highlight": {
+                "text": "MAIS VENDIDO",
+                "styles": {
+                  "color_hex": "#FFFFFF",
+                  "background_color_hex": "#FF7733"
+                }
+              }
+            },
+            {
+              "type": "brand",
+              "id": "brand",
+              "brand": {
+                "text": "DRYKO"
+              }
+            },
+            {
+              "type": "title",
+              "id": "title",
+              "title": {
+                "text": "Dryko Manta Líquida Spray Branco",
+                "long_title": false
+              }
+            },
+            {
+              "type": "seller",
+              "id": "seller",
+              "seller": {
+                "text": "Por LIDERANÇA FERRO E AÇO {icon_cockade}",
+                "values": [
+                  {
+                    "key": "icon_cockade",
+                    "type": "icon",
+                    "icon": {
+                      "key": "icon_cockade",
+                      "alt_text": "Loja oficial",
+                      "icon_id": "icon_cockade"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "price",
+              "id": "price",
+              "price": {
+                "current_price": {
+                  "value": 61.97,
+                  "currency": "BRL",
+                  "decimal_style": "superscript"
+                }
+              }
+            },
+            {
+              "type": "promotions",
+              "id": "promotions",
+              "promotions": [
+                {
+                  "type": "rebate",
+                  "text": "20% OFF Cartão Mercado Pago Visa"
+                }
+              ]
+            },
+            {
+              "type": "shipping",
+              "id": "shipping",
+              "shipping": {
+                "text": "Frete grátis",
+                "promise_type": "none"
+              }
+            },
+            {
+              "type": "reviews",
+              "id": "reviews",
+              "reviews": {
+                "rating_average": 4.8,
+                "total": 114,
+                "alt_text": "Avaliação 4,8 de 5. (114 avaliações)"
+              }
+            },
+            {
+              "type": "action_links",
+              "id": "action_links",
+              "action_links": [
+                {
+                  "id": "delete_action",
+                  "text": "Excluir",
+                  "styles": {
+                    "font_size": "m",
+                    "font_weight": "bold"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "unique_id": "6615b5691a0636bcb60",
+          "metadata": {
+            "id": "MLB4752880875",
+            "product_id": "MLB2092250620",
+            "user_product_id": "MLBU4076403938",
+            "url": "www.mercadolivre.com.br/2-uni-cimento-autonivelante-20kg-artfix-alta-resistencia/p/MLB2092250620",
+            "url_fragments": "#polycard_client=social-profile-middleend&source=lists&type=product&tracking_id=%7Btracking_id%7D&wid=MLB4752880875&sid=storefronts",
+            "url_params": "?matt_event_ts=1788374403802&matt_d2id=&matt_tracing_id=b192ea61-0d89-4aa0-97c3-b3837b846b27",
+            "vertical": "",
+            "bookmark_id": "MK-1-220494934-P-MLB2092250620-63d925e7-a57f-4d62-9b4e-a2e38150c175"
+          },
+          "pictures": {
+            "scale": "FILL",
+            "pictures": [
+              {
+                "id": "605963-MLB111828400198_062026"
+              }
+            ],
+            "square": "Q",
+            "alt_text": "Imagen"
+          },
+          "components": [
+            {
+              "type": "brand",
+              "id": "brand",
+              "brand": {
+                "text": "ART FIX"
+              }
+            },
+            {
+              "type": "title",
+              "id": "title",
+              "title": {
+                "text": "2 Uni Cimento Autonivelante 20kg Artfix Alta Resistencia",
+                "long_title": false
+              }
+            },
+            {
+              "type": "seller",
+              "id": "seller",
+              "seller": {
+                "text": "Por AJB Store {icon_cockade}",
+                "values": [
+                  {
+                    "key": "icon_cockade",
+                    "type": "icon",
+                    "icon": {
+                      "key": "icon_cockade",
+                      "alt_text": "Loja oficial",
+                      "icon_id": "icon_cockade"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "price",
+              "id": "price",
+              "price": {
+                "previous_price": {
+                  "value": 249.32,
+                  "currency": "BRL",
+                  "decimal_style": "normal"
+                },
+                "current_price": {
+                  "value": 246,
+                  "currency": "BRL",
+                  "decimal_style": "superscript"
+                },
+                "discount": {
+                  "value": 1
+                },
+                "installments": {
+                  "text": "12x {price}",
+                  "no_interest": false,
+                  "values": [
+                    {
+                      "key": "price",
+                      "type": "price",
+                      "price": {
+                        "value": 24.35,
+                        "currency": "BRL"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "promotions",
+              "id": "promotions",
+              "promotions": [
+                {
+                  "type": "rebate",
+                  "text": "20% OFF Cartão Mercado Pago Visa"
+                }
+              ]
+            },
+            {
+              "type": "shipping",
+              "id": "shipping",
+              "shipping": {
+                "text": "Frete grátis",
+                "promise_type": "none"
+              }
+            },
+            {
+              "type": "action_links",
+              "id": "action_links",
+              "action_links": [
+                {
+                  "id": "delete_action",
+                  "text": "Excluir",
+                  "styles": {
+                    "font_size": "m",
+                    "font_weight": "bold"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "unique_id": "282b6eac1a0636bcb60",
+          "metadata": {
+            "id": "MLB7236669682",
+            "product_id": "MLB51331914",
+            "user_product_id": "MLBU4418896306",
+            "url": "www.mercadolivre.com.br/fita-asfaltica-autoadesiva-aluminizado-10cm-x-10m-vedacit-cor-aluminio/p/MLB51331914",
+            "url_fragments": "#polycard_client=social-profile-middleend&source=lists&type=product&tracking_id=%7Btracking_id%7D&wid=MLB7236669682&sid=storefronts",
+            "url_params": "?matt_event_ts=1788374403802&matt_d2id=&matt_tracing_id=b192ea61-0d89-4aa0-97c3-b3837b846b27",
+            "vertical": "",
+            "bookmark_id": "MK-1-220494934-P-MLB51331914-63d925e7-a57f-4d62-9b4e-a2e38150c175"
+          },
+          "pictures": {
+            "scale": "FILL",
+            "pictures": [
+              {
+                "id": "671236-MLA99512136991_112025"
+              }
+            ],
+            "square": "Q",
+            "alt_text": "Imagen"
+          },
+          "components": [
+            {
+              "type": "highlight",
+              "id": "highlight",
+              "highlight": {
+                "text": "MAIS VENDIDO",
+                "styles": {
+                  "color_hex": "#FFFFFF",
+                  "background_color_hex": "#FF7733"
+                }
+              }
+            },
+            {
+              "type": "brand",
+              "id": "brand",
+              "brand": {
+                "text": "VEDACIT"
+              }
+            },
+            {
+              "type": "title",
+              "id": "title",
+              "title": {
+                "text": "Fita Asfáltica Autoadesiva Aluminizado 10cm X 10m Vedacit Cor Alumínio",
+                "long_title": false
+              }
+            },
+            {
+              "type": "seller",
+              "id": "seller",
+              "seller": {
+                "text": "Por HMO MAGAZINE {icon_cockade}",
+                "values": [
+                  {
+                    "key": "icon_cockade",
+                    "type": "icon",
+                    "icon": {
+                      "key": "icon_cockade",
+                      "alt_text": "Loja oficial",
+                      "icon_id": "icon_cockade"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "price",
+              "id": "price",
+              "price": {
+                "current_price": {
+                  "value": 24.6,
+                  "currency": "BRL",
+                  "decimal_style": "superscript"
+                }
+              }
+            },
+            {
+              "type": "promotions",
+              "id": "promotions",
+              "promotions": [
+                {
+                  "type": "rebate",
+                  "text": "20% OFF Cartão Mercado Pago Visa"
+                }
+              ]
+            },
+            {
+              "type": "shipping",
+              "id": "shipping",
+              "shipping": {
+                "text": "Frete grátis",
+                "promise_type": "none",
+                "icon": {
+                  "key": "vpp_full_icon",
+                  "alt_text": "Enviado pelo FULL",
+                  "icon_id": "vpp_full_icon"
+                }
+              }
+            },
+            {
+              "type": "reviews",
+              "id": "reviews",
+              "reviews": {
+                "rating_average": 4.8,
+                "total": 409,
+                "alt_text": "Avaliação 4,8 de 5. (409 avaliações)"
+              }
+            },
+            {
+              "type": "action_links",
+              "id": "action_links",
+              "action_links": [
+                {
+                  "id": "delete_action",
+                  "text": "Excluir",
+                  "styles": {
+                    "font_size": "m",
+                    "font_weight": "bold"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "unique_id": "41f6e69d1a0636bcb60",
+          "metadata": {
+            "id": "MLB6138137906",
+            "url": "produto.mercadolivre.com.br/MLB-6138137906-manta-liquida-flexivel-contra-infiltraco-resiflex-18kg-_JM",
+            "url_fragments": "#polycard_client=social-profile-middleend&source=lists&type=item&tracking_id=%7Btracking_id%7D",
+            "url_params": "?searchVariation=195279056715&matt_tracing_id=b192ea61-0d89-4aa0-97c3-b3837b846b27&matt_event_ts=1788374403802&matt_d2id=",
+            "vertical": "",
+            "bookmark_id": "MK-1-220494934-I-MLB6138137906-63d925e7-a57f-4d62-9b4e-a2e38150c175"
+          },
+          "pictures": {
+            "scale": "FILL",
+            "pictures": [
+              {
+                "id": "668719-MLB103365161582_012026"
+              }
+            ],
+            "square": "Q",
+            "alt_text": "Imagen",
+            "variation_id": "195279056715"
+          },
+          "components": [
+            {
+              "type": "title",
+              "id": "title",
+              "title": {
+                "text": "Manta Líquida Flexível Contra Infiltração Resiflex 18kg",
+                "long_title": false
+              }
+            },
+            {
+              "type": "seller",
+              "id": "seller",
+              "seller": {
+                "text": "Por IMPÉTRUS {icon_cockade}",
+                "values": [
+                  {
+                    "key": "icon_cockade",
+                    "type": "icon",
+                    "icon": {
+                      "key": "icon_cockade",
+                      "alt_text": "Loja oficial",
+                      "icon_id": "icon_cockade"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "price",
+              "id": "price",
+              "price": {
+                "previous_price": {
+                  "value": 350,
+                  "currency": "BRL",
+                  "decimal_style": "normal"
+                },
+                "current_price": {
+                  "value": 243.9,
+                  "currency": "BRL",
+                  "decimal_style": "superscript"
+                },
+                "discount": {
+                  "value": 30
+                },
+                "installments": {
+                  "text": "12x {price}",
+                  "no_interest": false,
+                  "values": [
+                    {
+                      "key": "price",
+                      "type": "price",
+                      "price": {
+                        "value": 24.14,
+                        "currency": "BRL"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "promotions",
+              "id": "promotions",
+              "promotions": [
+                {
+                  "type": "rebate",
+                  "text": "20% OFF Cartão Mercado Pago Visa"
+                }
+              ]
+            },
+            {
+              "type": "shipping",
+              "id": "shipping",
+              "shipping": {
+                "text": "Frete grátis",
+                "promise_type": "none"
+              }
+            },
+            {
+              "type": "reviews",
+              "id": "reviews",
+              "reviews": {
+                "rating_average": 4.9,
+                "total": 11,
+                "alt_text": "Avaliação 4,9 de 5. (11 avaliações)"
+              }
+            },
+            {
+              "type": "action_links",
+              "id": "action_links",
+              "action_links": [
+                {
+                  "id": "delete_action",
+                  "text": "Excluir",
+                  "styles": {
+                    "font_size": "m",
+                    "font_weight": "bold"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "unique_id": "456702101a0636bcb61",
+          "metadata": {
+            "id": "MLB4640305567",
+            "user_product_id": "MLBU3922381445",
+            "url": "www.mercadolivre.com.br/tinta-liquida-36l-antiderrapante-emborrachada-pra-piso/up/MLBU3922381445",
+            "url_fragments": "#polycard_client=social-profile-middleend&wid=MLB4640305567&source=lists&type=item&tracking_id=%7Btracking_id%7D&sid=storefronts",
+            "url_params": "?pdp_filters=item_id%3AMLB4640305567&matt_tracing_id=b192ea61-0d89-4aa0-97c3-b3837b846b27&matt_event_ts=1788374403802&matt_d2id=",
+            "vertical": "",
+            "bookmark_id": "MK-1-220494934-I-MLB4640305567-63d925e7-a57f-4d62-9b4e-a2e38150c175"
+          },
+          "pictures": {
+            "scale": "FILL",
+            "pictures": [
+              {
+                "id": "616175-MLB110993898717_042026"
+              }
+            ],
+            "square": "Q",
+            "alt_text": "Imagen"
+          },
+          "components": [
+            {
+              "type": "brand",
+              "id": "brand",
+              "brand": {
+                "text": "RESIFLEX"
+              }
+            },
+            {
+              "type": "title",
+              "id": "title",
+              "title": {
+                "text": "Tinta Liquida 3,6l Antiderrapante Emborrachada Pra Piso Amarelo Fosco",
+                "long_title": false
+              }
+            },
+            {
+              "type": "price",
+              "id": "price",
+              "price": {
+                "current_price": {
+                  "value": 118,
+                  "currency": "BRL",
+                  "decimal_style": "superscript"
+                },
+                "installments": {
+                  "text": "4x {price} sem juros",
+                  "no_interest": true,
+                  "values": [
+                    {
+                      "key": "price",
+                      "type": "price",
+                      "price": {
+                        "value": 29.5,
+                        "currency": "BRL"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "promotions",
+              "id": "promotions",
+              "promotions": [
+                {
+                  "type": "rebate",
+                  "text": "20% OFF Cartão Mercado Pago Visa"
+                }
+              ]
+            },
+            {
+              "type": "shipping",
+              "id": "shipping",
+              "shipping": {
+                "text": "Frete grátis",
+                "promise_type": "none"
+              }
+            },
+            {
+              "type": "action_links",
+              "id": "action_links",
+              "action_links": [
+                {
+                  "id": "delete_action",
+                  "text": "Excluir",
+                  "styles": {
+                    "font_size": "m",
+                    "font_weight": "bold"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "unique_id": "fabdab31a0636bcb60",
+          "metadata": {
+            "id": "MLB4831429739",
+            "user_product_id": "MLBU4176177379",
+            "url": "www.mercadolivre.com.br/veda-trinca-po-reparador-rachaduras-stop-trincas-700g/up/MLBU4176177379",
+            "url_fragments": "#polycard_client=social-profile-middleend&wid=MLB4831429739&source=lists&type=item&tracking_id=%7Btracking_id%7D&sid=storefronts",
+            "url_params": "?pdp_filters=item_id%3AMLB4831429739&matt_tracing_id=b192ea61-0d89-4aa0-97c3-b3837b846b27&matt_event_ts=1788374403802&matt_d2id=",
+            "vertical": "",
+            "bookmark_id": "MK-1-220494934-I-MLB4831429739-63d925e7-a57f-4d62-9b4e-a2e38150c175"
+          },
+          "pictures": {
+            "scale": "FILL",
+            "pictures": [
+              {
+                "id": "972600-MLB113951754463_062026"
+              }
+            ],
+            "square": "Q",
+            "alt_text": "Imagen"
+          },
+          "components": [
+            {
+              "type": "highlight",
+              "id": "highlight",
+              "highlight": {
+                "text": "{black_friday_icon} OFERTA IMPERDÍVEL",
+                "values": [
+                  {
+                    "key": "black_friday_icon",
+                    "type": "icon",
+                    "icon": {
+                      "key": "black_friday_icon",
+                      "icon_id": "black_friday_icon"
+                    }
+                  }
+                ],
+                "styles": {
+                  "color_hex": "#FFFFFF",
+                  "background_color_hex": "#2968C8"
+                }
+              }
+            },
+            {
+              "type": "brand",
+              "id": "brand",
+              "brand": {
+                "text": "PULO DO GATO"
+              }
+            },
+            {
+              "type": "title",
+              "id": "title",
+              "title": {
+                "text": "Veda Trinca Pó Reparador Rachaduras Stop Trincas 700g",
+                "long_title": false
+              }
+            },
+            {
+              "type": "price",
+              "id": "price",
+              "price": {
+                "previous_price": {
+                  "value": 99.9,
+                  "currency": "BRL",
+                  "decimal_style": "normal"
+                },
+                "current_price": {
+                  "value": 93.9,
+                  "currency": "BRL",
+                  "decimal_style": "superscript"
+                },
+                "discount": {
+                  "value": 6
+                }
+              }
+            },
+            {
+              "type": "promotions",
+              "id": "promotions",
+              "promotions": [
+                {
+                  "type": "rebate",
+                  "text": "20% OFF Cartão Mercado Pago Visa"
+                }
+              ]
+            },
+            {
+              "type": "shipping",
+              "id": "shipping",
+              "shipping": {
+                "text": "Frete grátis",
+                "promise_type": "none"
+              }
+            },
+            {
+              "type": "action_links",
+              "id": "action_links",
+              "action_links": [
+                {
+                  "id": "delete_action",
+                  "text": "Excluir",
+                  "styles": {
+                    "font_size": "m",
+                    "font_weight": "bold"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "unique_id": "80c3ac6b1a0636bcb60",
+          "metadata": {
+            "id": "MLB5691136494",
+            "product_id": "MLB2068850292",
+            "user_product_id": "MLBU3419007476",
+            "url": "www.mercadolivre.com.br/veda-trinca-reparador-superficies-stop-trincas-700g/p/MLB2068850292",
+            "url_fragments": "#polycard_client=social-profile-middleend&source=lists&type=product&tracking_id=%7Btracking_id%7D&wid=MLB5691136494&sid=storefronts",
+            "url_params": "?matt_event_ts=1788374403802&matt_d2id=&matt_tracing_id=b192ea61-0d89-4aa0-97c3-b3837b846b27",
+            "vertical": "",
+            "bookmark_id": "MK-1-220494934-P-MLB2068850292-63d925e7-a57f-4d62-9b4e-a2e38150c175"
+          },
+          "pictures": {
+            "scale": "FILL",
+            "pictures": [
+              {
+                "id": "975037-MLB92223380901_092025"
+              }
+            ],
+            "square": "Q",
+            "alt_text": "Imagen"
+          },
+          "components": [
+            {
+              "type": "highlight",
+              "id": "highlight",
+              "highlight": {
+                "text": "{black_friday_icon} OFERTA IMPERDÍVEL",
+                "values": [
+                  {
+                    "key": "black_friday_icon",
+                    "type": "icon",
+                    "icon": {
+                      "key": "black_friday_icon",
+                      "icon_id": "black_friday_icon"
+                    }
+                  }
+                ],
+                "styles": {
+                  "color_hex": "#FFFFFF",
+                  "background_color_hex": "#2968C8"
+                }
+              }
+            },
+            {
+              "type": "brand",
+              "id": "brand",
+              "brand": {
+                "text": "PULO DO GATO"
+              }
+            },
+            {
+              "type": "title",
+              "id": "title",
+              "title": {
+                "text": "Veda Trinca Reparador Superficies - Stop Trincas 700g",
+                "long_title": false
+              }
+            },
+            {
+              "type": "seller",
+              "id": "seller",
+              "seller": {
+                "text": "Por PULO DO GATO {icon_cockade}",
+                "values": [
+                  {
+                    "key": "icon_cockade",
+                    "type": "icon",
+                    "icon": {
+                      "key": "icon_cockade",
+                      "alt_text": "Loja oficial",
+                      "icon_id": "icon_cockade"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "price",
+              "id": "price",
+              "price": {
+                "previous_price": {
+                  "value": 92.8,
+                  "currency": "BRL",
+                  "decimal_style": "normal"
+                },
+                "current_price": {
+                  "value": 79.34,
+                  "currency": "BRL",
+                  "decimal_style": "superscript"
+                },
+                "discount_label": {
+                  "text": "14% OFF no Pix"
+                },
+                "installments": {
+                  "text": "{o} {price_total} {en} 3x {price} sem juros",
+                  "no_interest": true,
+                  "values": [
+                    {
+                      "key": "o",
+                      "type": "label",
+                      "label": {
+                        "text": "ou"
+                      },
+                      "styles": {
+                        "color": "primary"
+                      }
+                    },
+                    {
+                      "key": "price_total",
+                      "type": "price",
+                      "price": {
+                        "value": 83.52,
+                        "currency": "BRL"
+                      },
+                      "styles": {
+                        "color": "primary"
+                      }
+                    },
+                    {
+                      "key": "en",
+                      "type": "label",
+                      "label": {
+                        "text": "em"
+                      },
+                      "styles": {
+                        "color": "primary"
+                      }
+                    },
+                    {
+                      "key": "price",
+                      "type": "price",
+                      "price": {
+                        "value": 27.84,
+                        "currency": "BRL"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "promotions",
+              "id": "promotions",
+              "promotions": [
+                {
+                  "type": "rebate",
+                  "text": "20% OFF Cartão Mercado Pago Visa"
+                }
+              ]
+            },
+            {
+              "type": "shipping",
+              "id": "shipping",
+              "shipping": {
+                "text": "Frete grátis",
+                "promise_type": "none",
+                "icon": {
+                  "key": "vpp_full_icon",
+                  "alt_text": "Enviado pelo FULL",
+                  "icon_id": "vpp_full_icon"
+                }
+              }
+            },
+            {
+              "type": "reviews",
+              "id": "reviews",
+              "reviews": {
+                "rating_average": 4.4,
+                "total": 53,
+                "alt_text": "Avaliação 4,4 de 5. (53 avaliações)"
+              }
+            },
+            {
+              "type": "action_links",
+              "id": "action_links",
+              "action_links": [
+                {
+                  "id": "delete_action",
+                  "text": "Excluir",
+                  "styles": {
+                    "font_size": "m",
+                    "font_weight": "bold"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "unique_id": "d3fb717c1a0636bcb61",
+          "metadata": {
+            "id": "MLB7534279632",
+            "product_id": "MLB20693097",
+            "user_product_id": "MLBU4826669283",
+            "url": "www.mercadolivre.com.br/perfume-masculino-rabanne-1-million-100ml-eau-de-toilette-edt-fragrancia-amadeirada-picante-com-couro-e-mbar/p/MLB20693097",
+            "url_fragments": "#polycard_client=social-profile-middleend&source=lists&type=product&tracking_id=%7Btracking_id%7D&wid=MLB7534279632&sid=storefronts",
+            "url_params": "?matt_event_ts=1788374403802&matt_d2id=&matt_tracing_id=b192ea61-0d89-4aa0-97c3-b3837b846b27",
+            "vertical": "",
+            "bookmark_id": "MK-1-220494934-P-MLB20693097-63d925e7-a57f-4d62-9b4e-a2e38150c175"
+          },
+          "pictures": {
+            "scale": "FILL",
+            "pictures": [
+              {
+                "id": "912680-MLA113675550524_072026"
+              }
+            ],
+            "square": "Q",
+            "alt_text": "Imagen"
+          },
+          "components": [
+            {
+              "type": "highlight",
+              "id": "highlight",
+              "highlight": {
+                "text": "MAIS VENDIDO",
+                "styles": {
+                  "color_hex": "#FFFFFF",
+                  "background_color_hex": "#FF7733"
+                }
+              }
+            },
+            {
+              "type": "brand",
+              "id": "brand",
+              "brand": {
+                "text": "RABANNE"
+              }
+            },
+            {
+              "type": "title",
+              "id": "title",
+              "title": {
+                "text": "Perfume Masculino Rabanne 1 Million 100ml Eau De Toilette Edt  Fragrância Amadeirada Picante Com Couro E Âmbar",
+                "long_title": false
+              }
+            },
+            {
+              "type": "seller",
+              "id": "seller",
+              "seller": {
+                "text": "Por B.Stories {icon_cockade}",
+                "values": [
+                  {
+                    "key": "icon_cockade",
+                    "type": "icon",
+                    "icon": {
+                      "key": "icon_cockade",
+                      "alt_text": "Loja oficial",
+                      "icon_id": "icon_cockade"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "type": "price",
+              "id": "price",
+              "price": {
+                "previous_price": {
+                  "value": 769,
+                  "currency": "BRL",
+                  "decimal_style": "normal"
+                },
+                "current_price": {
+                  "value": 459.82,
+                  "currency": "BRL",
+                  "decimal_style": "superscript"
+                },
+                "discount": {
+                  "value": 40
+                },
+                "installments": {
+                  "text": "9x {price} sem juros",
+                  "no_interest": true,
+                  "values": [
+                    {
+                      "key": "price",
+                      "type": "price",
+                      "price": {
+                        "value": 51.09,
+                        "currency": "BRL"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "promotions",
+              "id": "promotions",
+              "promotions": [
+                {
+                  "type": "rebate",
+                  "text": "20% OFF Cartão Mercado Pago Visa"
+                }
+              ]
+            },
+            {
+              "type": "shipping",
+              "id": "shipping",
+              "shipping": {
+                "text": "Frete grátis",
+                "promise_type": "none",
+                "icon": {
+                  "key": "vpp_full_icon",
+                  "alt_text": "Enviado pelo FULL",
+                  "icon_id": "vpp_full_icon"
+                }
+              }
+            },
+            {
+              "type": "reviews",
+              "id": "reviews",
+              "reviews": {
+                "rating_average": 4.7,
+                "total": 6883,
+                "alt_text": "Avaliação 4,7 de 5. (6.883 avaliações)"
+              }
+            },
+            {
+              "type": "action_links",
+              "id": "action_links",
+              "action_links": [
+                {
+                  "id": "delete_action",
+                  "text": "Excluir",
+                  "styles": {
+                    "font_size": "m",
+                    "font_weight": "bold"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "unique_id": "28f34fcd1a0636bcb61",
+          "metadata": {
+            "id": "MLB5217096562",
+            "product_id": "MLB16998134",
+            "user_product_id": "MLBU2815236250",
+            "url": "www.mercadolivre.com.br/perfume-rabanne-1-million-parfum-200-ml-masculino/p/MLB16998134",
+            "url_fragments": "#polycard_client=social-profile-middleend&source=lists&type=product&tracking_id=%7Btracking_id%7D&wid=MLB5217096562&sid=storefronts",
+            "url_params": "?matt_event_ts=1788374403802&matt_d2id=&matt_tracing_id=b192ea61-0d89-4aa0-97c3-b3837b846b27",
+            "vertical": "",
+            "bookmark_id": "MK-1-220494934-P-MLB16998134-63d925e7-a57f-4d62-9b4e-a2e38150c175"
+          },
+          "pictures": {
+            "scale": "FILL",
+            "pictures": [
+              {
+                "id": "889396-MLA94257946865_102025"
+              }
+            ],
+            "square": "Q",
+            "alt_text": "Imagen"
+          },
+          "components": [
+            {
+              "type": "highlight",
+              "id": "highlight",
+              "highlight": {
+                "text": "MAIS VENDIDO",
+                "styles": {
+                  "color_hex": "#FFFFFF",
+                  "background_color_hex": "#FF7733"
+                }
+              }
+            },
+            {
+              "type": "brand",
+              "id": "brand",
+              "brand": {
+                "text": "RABANNE"
+              }
+            },
+            {
+              "type": "title",
+              "id": "title",
+              "title": {
+                "text": "Perfume Rabanne 1 Million Parfum 200 Ml Masculino",
+                "long_title": false
+              }
+            },
+            {
+              "type": "price",
+              "id": "price",
+              "price": {
+                "previous_price": {
+                  "value": 869.5,
+                  "currency": "BRL",
+                  "decimal_style": "normal"
+                },
+                "current_price": {
+                  "value": 826.02,
+                  "currency": "BRL",
+                  "decimal_style": "superscript"
+                },
+                "discount": {
+                  "value": 5
+                },
+                "installments": {
+                  "text": "10x {price} sem juros",
+                  "no_interest": true,
+                  "values": [
+                    {
+                      "key": "price",
+                      "type": "price",
+                      "price": {
+                        "value": 82.6,
+                        "currency": "BRL"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "promotions",
+              "id": "promotions",
+              "promotions": [
+                {
+                  "type": "rebate",
+                  "text": "20% OFF Cartão Mercado Pago Visa"
+                }
+              ]
+            },
+            {
+              "type": "shipping",
+              "id": "shipping",
+              "shipping": {
+                "text": "Frete grátis",
+                "promise_type": "none"
+              }
+            },
+            {
+              "type": "reviews",
+              "id": "reviews",
+              "reviews": {
+                "rating_average": 4.7,
+                "total": 3944,
+                "alt_text": "Avaliação 4,7 de 5. (3.944 avaliações)"
+              }
+            },
+            {
+              "type": "action_links",
+              "id": "action_links",
+              "action_links": [
+                {
+                  "id": "delete_action",
+                  "text": "Excluir",
+                  "styles": {
+                    "font_size": "m",
+                    "font_weight": "bold"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "unique_id": "54c708a41a0636bcb61",
+          "metadata": {
+            "id": "MLB3821290575",
+            "user_product_id": "MLBU1740122707",
+            "url": "www.mercadolivre.com.br/sos-trincas-elastment-fita-liquida-tapa-trinca-branco-800g/up/MLBU1740122707",
+            "url_fragments": "#polycard_client=social-profile-middleend&wid=MLB3821290575&source=lists&type=item&tracking_id=%7Btracking_id%7D&sid=storefronts",
+            "url_params": "?pdp_filters=item_id%3AMLB3821290575&matt_tracing_id=b192ea61-0d89-4aa0-97c3-b3837b846b27&matt_event_ts=1788374403802&matt_d2id=",
+            "vertical": "",
+            "bookmark_id": "MK-1-220494934-I-MLB3821290575-63d925e7-a57f-4d62-9b4e-a2e38150c175"
+          },
+          "pictures": {
+            "scale": "FILL",
+            "pictures": [
+              {
+                "id": "734508-MLB91986969240_092025"
+              }
+            ],
+            "square": "Q",
+            "alt_text": "Imagen"
+          },
+          "components": [
+            {
+              "type": "brand",
+              "id": "brand",
+              "brand": {
+                "text": "ELASTMENT"
+              }
+            },
+            {
+              "type": "title",
+              "id": "title",
+              "title": {
+                "text": "Sos Trincas Elastment Fita Líquida Tapa Trinca Branco 800g Branco Acetinado",
+                "long_title": false
+              }
+            },
+            {
+              "type": "price",
+              "id": "price",
+              "price": {
+                "current_price": {
+                  "value": 234.74,
+                  "currency": "BRL",
+                  "decimal_style": "superscript"
+                },
+                "installments": {
+                  "text": "12x {price}",
+                  "no_interest": false,
+                  "values": [
+                    {
+                      "key": "price",
+                      "type": "price",
+                      "price": {
+                        "value": 23.24,
+                        "currency": "BRL"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "promotions",
+              "id": "promotions",
+              "promotions": [
+                {
+                  "type": "rebate",
+                  "text": "20% OFF Cartão Mercado Pago Visa"
+                }
+              ]
+            },
+            {
+              "type": "shipping",
+              "id": "shipping",
+              "shipping": {
+                "text": "Frete grátis",
+                "promise_type": "none"
+              }
+            },
+            {
+              "type": "reviews",
+              "id": "reviews",
+              "reviews": {
+                "rating_average": 5,
+                "total": 1,
+                "alt_text": "Avaliação 5 de 5. (1 avaliações)"
+              }
+            },
+            {
+              "type": "action_links",
+              "id": "action_links",
+              "action_links": [
+                {
+                  "id": "delete_action",
+                  "text": "Excluir",
+                  "styles": {
+                    "font_size": "m",
+                    "font_weight": "bold"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "unique_id": "85b7a2651a0636bcb61",
+          "metadata": {
+            "id": "MLB7345230858",
+            "url": "produto.mercadolivre.com.br/MLB-7345230858-sellante-para-concreto-secagem-rapida-400ml-impermeavel-_JM",
+            "url_fragments": "#polycard_client=social-profile-middleend&source=lists&type=item&tracking_id=%7Btracking_id%7D",
+            "url_params": "?searchVariation=198401915292&matt_tracing_id=b192ea61-0d89-4aa0-97c3-b3837b846b27&matt_event_ts=1788374403802&matt_d2id=",
+            "vertical": "",
+            "bookmark_id": "MK-1-220494934-I-MLB7345230858-63d925e7-a57f-4d62-9b4e-a2e38150c175"
+          },
+          "pictures": {
+            "scale": "FILL",
+            "pictures": [
+              {
+                "id": "675853-CBT113868139724_072026"
+              }
+            ],
+            "square": "Q",
+            "alt_text": "Imagen",
+            "variation_id": "198401915292"
+          },
+          "components": [
+            {
+              "type": "brand",
+              "id": "brand",
+              "brand": {
+                "text": "GENERIC"
+              }
+            },
+            {
+              "type": "title",
+              "id": "title",
+              "title": {
+                "text": "Sellante Para Concreto Secagem Rápida 400ml Impermeável",
+                "long_title": false
+              }
+            },
+            {
+              "type": "price",
+              "id": "price",
+              "price": {
+                "previous_price": {
+                  "value": 145.51,
+                  "currency": "BRL",
+                  "decimal_style": "normal"
+                },
+                "current_price": {
+                  "value": 138.24,
+                  "currency": "BRL",
+                  "decimal_style": "superscript"
+                },
+                "discount": {
+                  "value": 5
+                },
+                "installments": {
+                  "text": "4x {price} sem juros",
+                  "no_interest": true,
+                  "values": [
+                    {
+                      "key": "price",
+                      "type": "price",
+                      "price": {
+                        "value": 34.56,
+                        "currency": "BRL"
+                      }
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "type": "promotions",
+              "id": "promotions",
+              "promotions": [
+                {
+                  "type": "rebate",
+                  "text": "20% OFF Cartão Mercado Pago Visa"
+                }
+              ]
+            },
+            {
+              "type": "shipping",
+              "id": "shipping",
+              "shipping": {
+                "text": "Frete grátis",
+                "promise_type": "none"
+              }
+            },
+            {
+              "type": "action_links",
+              "id": "action_links",
+              "action_links": [
+                {
+                  "id": "delete_action",
+                  "text": "Excluir",
+                  "styles": {
+                    "font_size": "m",
+                    "font_weight": "bold"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "profilePath": "jeomarsouzalima",
+      "shareLink": "https://mercadolivre.com/sec/2Sq2By7",
+      "totalItems": 300,
+      "limit": 16,
+      "siteId": "MLB",
+      "userId": "220494934",
+      "domain": "https://www.mercadolivre.com.br",
+      "listOwnerId": "220494934",
+      "listName": "Minhas recomendações",
+      "urlLists": "https://www.mercadolivre.com.br/social/jeomarsouzalima/lists",
+      "isHeaderAndFooterVisible": true,
+      "page": "1",
+      "openInApp": {
+        "shouldRedirect": false,
+        "from": {
+          "all": false
+        },
+        "deeplink": "meli://webview/?webkit-engine=2&search_mode=expanded&url=https%3A%2F%2Fwww.mercadolivre.com.br%2Fsocial%2Fjeomarsouzalima%2Flists%2F63d925e7-a57f-4d62-9b4e-a2e38150c175%3F&d2id=2edf4ca3-6afc-4ac6-a9b5-6f5d064df437#in_app=true&in_app_d2id=2edf4ca3-6afc-4ac6-a9b5-6f5d064df437",
+        "redirectUrl": null
+      },
+      "ogImage": "https://http2.mlstatic.com/D_Q_NP_740870-MLB111181677510_052026-AB{sanitized_title}.webp",
+      "ogTitle": "Lista de afiliados",
+      "affiliateName": "Minhas recomendações"
+    }
+  },
+  "mainEntry": "profilepath-lists-list_id-index"
+}
