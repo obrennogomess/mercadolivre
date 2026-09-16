@@ -1,5 +1,5 @@
 import QRCode from 'qrcode';
-import { generatePixPayload } from '../utils/pix';
+import { generatePixPayload } from '../utils/pix.ts';
 
 // User's default SigiloPay credentials so Vercel works immediately out-of-the-box
 export const DEFAULT_SIGILOPAY_PUBLIC_KEY = 'brennogomes2003_ylwy22xunyz69ly7';

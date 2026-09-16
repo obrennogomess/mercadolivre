@@ -98,6 +98,7 @@ export const MercadoLivreCheckout: React.FC<MercadoLivreCheckoutProps> = ({
 
   // Pix state (SigiloPay)
   const [pixLoading, setPixLoading] = useState<boolean>(false);
+  const [pixError, setPixError] = useState<string | null>(null);
   const [pixCode, setPixCode] = useState<string>('');
   const [qrCodeUrl, setQrCodeUrl] = useState<string>('');
   const [orderId, setOrderId] = useState<string>('');
@@ -238,6 +239,7 @@ export const MercadoLivreCheckout: React.FC<MercadoLivreCheckoutProps> = ({
   // Generate Pix order with SigiloPay
   const handleGeneratePixPayment = async () => {
     setPixLoading(true);
+    setPixError(null);
     const newOrderId = `MLB${Date.now().toString().slice(-8)}${Math.floor(100 + Math.random() * 900)}`;
     setOrderId(newOrderId);
 
@@ -254,98 +256,89 @@ export const MercadoLivreCheckout: React.FC<MercadoLivreCheckoutProps> = ({
             : `Spray Dryko Impermeabilizante 400ml (${primaryColor})`)
         : `${primaryKit.label} - Spray Dryko Impermeabilizante 400ml (${primaryColor})`;
 
-      // Call server backend for SigiloPay
       const normalizedAmount = Number(finalPrice.toFixed(2));
-      const res = await fetch('/api/sigilopay/create-pix', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          amount: normalizedAmount,
-          buyerName: receiverName,
-          buyerEmail: email,
-          buyerCpf: cpf,
-          buyerPhone: phone,
-          color: primaryColor,
-          kitSize: primaryItem?.kitSize || '1 unidade (400ml)',
-          productId: primaryProdId,
-          productTitle: primaryProdTitle,
-          quantity: primaryItem?.quantity || 1,
-          transactionId: newOrderId,
-          products: checkoutItems.map((i) => {
-            const iKit = getKitDetails(i.kitSize);
-            const iColor = i.variation.colorName || 'Branco';
-            const iIsSingle = !i.kitSize || i.kitSize.includes('1 unidade');
-            const iSlug = iKit.units === 1 ? '1un' : `${iKit.units}un`;
-            const iId = `dryko-kit-${iSlug}-${iColor}`.toLowerCase().replace(/\s+/g, '-');
-            const iName = iIsSingle
-              ? (i.quantity > 1 ? `${i.quantity}x Spray Dryko Impermeabilizante 400ml (${iColor})` : `Spray Dryko Impermeabilizante 400ml (${iColor})`)
-              : `${iKit.label} - Spray Dryko Impermeabilizante 400ml (${iColor})`;
-            const singleItemPrice = Number(getItemPrice(i).toFixed(2));
-            const discountedItemPrice = paymentMethod === 'pix' ? Number((singleItemPrice * 0.6).toFixed(2)) : singleItemPrice;
-            return {
-              id: iId,
-              name: iName,
-              quantity: 1,
-              price: discountedItemPrice,
-            };
-          }),
+      const payloadBody = {
+        amount: normalizedAmount,
+        buyerName: receiverName || 'Cliente Mercado Livre',
+        buyerEmail: email || 'cliente@mercadolivre.com',
+        buyerCpf: cpf,
+        buyerPhone: phone,
+        color: primaryColor,
+        kitSize: primaryItem?.kitSize || '1 unidade (400ml)',
+        productId: primaryProdId,
+        productTitle: primaryProdTitle,
+        quantity: primaryItem?.quantity || 1,
+        transactionId: newOrderId,
+        products: checkoutItems.map((i) => {
+          const iKit = getKitDetails(i.kitSize);
+          const iColor = i.variation.colorName || 'Branco';
+          const iIsSingle = !i.kitSize || i.kitSize.includes('1 unidade');
+          const iSlug = iKit.units === 1 ? '1un' : `${iKit.units}un`;
+          const iId = `dryko-kit-${iSlug}-${iColor}`.toLowerCase().replace(/\s+/g, '-');
+          const iName = iIsSingle
+            ? (i.quantity > 1 ? `${i.quantity}x Spray Dryko Impermeabilizante 400ml (${iColor})` : `Spray Dryko Impermeabilizante 400ml (${iColor})`)
+            : `${iKit.label} - Spray Dryko Impermeabilizante 400ml (${iColor})`;
+          const singleItemPrice = Number(getItemPrice(i).toFixed(2));
+          const discountedItemPrice = paymentMethod === 'pix' ? Number((singleItemPrice * 0.6).toFixed(2)) : singleItemPrice;
+          return {
+            id: iId,
+            name: iName,
+            quantity: 1,
+            price: discountedItemPrice,
+          };
         }),
-      });
+      };
 
-      if (res.ok) {
-        const data = await res.json();
-        if (data.pixCode) {
-          if (data.transactionId) {
-            setOrderId(data.transactionId);
+      // Try API endpoints with automatic retry for serverless cold starts
+      const endpoints = ['/api/sigilopay/create-pix', '/api/create-pix'];
+      let successData: any = null;
+      let lastError = '';
+
+      for (const endpoint of endpoints) {
+        try {
+          const res = await fetch(endpoint, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payloadBody),
+          });
+
+          if (res.ok) {
+            const data = await res.json();
+            if (data.pixCode) {
+              successData = data;
+              break;
+            } else if (data.error) {
+              lastError = data.error;
+            }
+          } else {
+            const errJson = await res.json().catch(() => null);
+            lastError = errJson?.error || `Status ${res.status}`;
           }
-          if (data.sigiloTransactionId) {
-            setSigiloTxId(data.sigiloTransactionId);
-          }
-          if (data.orderUrl) {
-            setOrderUrl(data.orderUrl);
-          }
-          if (data.gateway) {
-            setGatewayLabel(data.gateway);
-          }
-          if (data.isLiveSigiloPay !== undefined) {
-            setIsLiveSigilo(Boolean(data.isLiveSigiloPay));
-          }
-          setPixCode(data.pixCode);
-          setQrCodeUrl(data.qrCodeDataUrl);
-          setStep(3);
-          setPixLoading(false);
-          return;
+        } catch (err: any) {
+          lastError = err?.message || 'Erro de conexão';
         }
       }
-    } catch (e) {
-      console.warn('Backend /api/sigilopay call fallback to client generation:', e);
+
+      if (successData) {
+        if (successData.transactionId) setOrderId(successData.transactionId);
+        if (successData.sigiloTransactionId) setSigiloTxId(successData.sigiloTransactionId);
+        if (successData.orderUrl) setOrderUrl(successData.orderUrl);
+        if (successData.gateway) setGatewayLabel(successData.gateway);
+        if (successData.isLiveSigiloPay !== undefined) setIsLiveSigilo(Boolean(successData.isLiveSigiloPay));
+        setPixCode(successData.pixCode);
+        setQrCodeUrl(successData.qrCodeDataUrl);
+        setStep(3);
+        setPixLoading(false);
+        return;
+      }
+
+      setPixError(lastError || 'Não foi possível gerar a cobrança Pix com o gateway oficial SigiloPay. Tente novamente.');
+    } catch (e: any) {
+      console.error('Erro geral ao processar Pix:', e);
+      setPixError(e?.message || 'Erro ao comunicar com o servidor.');
+    } finally {
+      setPixLoading(false);
     }
-
-    // Client-side fallback: generates compliant BACEN Pix string & QR Code
-    const clientPix = generatePixPayload({
-      pixKey: 'pagamentos@sigilopay.com.br',
-      merchantName: 'MERCADO LIVRE SIGILOPAY',
-      merchantCity: 'SAO PAULO',
-      txId: newOrderId,
-      amount: finalPrice,
-      description: `ML DRYKO ${checkoutItems[0]?.variation.colorName || 'SPRAY'}`,
-    });
-
-    try {
-      const qrDataUrl = await QRCode.toDataURL(clientPix, {
-        errorCorrectionLevel: 'M',
-        margin: 2,
-        width: 320,
-        color: { dark: '#000000', light: '#ffffff' },
-      });
-      setPixCode(clientPix);
-      setQrCodeUrl(qrDataUrl);
-    } catch {
-      setPixCode(clientPix);
-    }
-
-    setStep(3);
-    setPixLoading(false);
   };
 
   // Copy Pix Code to clipboard
@@ -869,6 +862,23 @@ export const MercadoLivreCheckout: React.FC<MercadoLivreCheckoutProps> = ({
                       <li>Confirme o valor e conclua a transferência. A confirmação é instantânea!</li>
                     </ol>
                   </div>
+
+                  {/* Error Alert */}
+                  {pixError && (
+                    <div className="p-3 bg-red-50 border border-red-200 rounded-lg text-xs text-red-700 flex items-center justify-between gap-3 animate-in fade-in">
+                      <div className="flex items-center gap-2">
+                        <span className="font-bold">⚠️ Erro:</span>
+                        <span>{pixError}</span>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={handleGeneratePixPayment}
+                        className="px-3 py-1 bg-red-600 hover:bg-red-700 text-white font-semibold rounded shrink-0 cursor-pointer"
+                      >
+                        Tentar novamente
+                      </button>
+                    </div>
+                  )}
 
                   {/* Submit Button */}
                   <div className="pt-3 border-t border-neutral-100 flex items-center justify-between">

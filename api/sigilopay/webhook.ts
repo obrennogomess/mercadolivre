@@ -1,5 +1,3 @@
-import { transactionStore } from '../../src/server/sigiloService';
-
 export default async function handler(req: any, res: any) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' });
@@ -32,12 +30,8 @@ export default async function handler(req: any, res: any) {
       event.status === 'paid' ||
       event.status === 'approved';
 
-    if (txId && transactionStore.has(txId)) {
-      const tx = transactionStore.get(txId)!;
-      if (isPaid) {
-        tx.status = 'approved';
-        console.log(`[Vercel Webhook] Transação ${txId} APROVADA!`);
-      }
+    if (isPaid && txId) {
+      console.log(`[Vercel Webhook] Pagamento aprovado para transação: ${txId}`);
     }
 
     return res.status(200).json({ received: true, success: true });
